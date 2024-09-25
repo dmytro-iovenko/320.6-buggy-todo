@@ -1,7 +1,7 @@
 import Todo from "./Todo";
 
 function TodoList({ todos, listType, deleteTodo }) {
-  let filteredTodos = todoss.filtrer((item) => {
+  let filteredTodos = todos.filter((item) => {
     if (listType === "all") {
       return true;
     } else if (listType === "complete") {
@@ -18,13 +18,13 @@ function TodoList({ todos, listType, deleteTodo }) {
 
   return (
     <ul>
-      filteredTodos.map((item) => (
+      {filteredTodos.map((item) => (
         <Todo
-          // item={item}
+          item={item}
           completeTodo={completeTodo}
           deleteTodo={deleteTodo}
         />
-      ))
+      ))}
     </ul>
   );
 }
