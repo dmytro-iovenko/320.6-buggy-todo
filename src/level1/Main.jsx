@@ -8,8 +8,8 @@ function Main() {
   console.log(text);
   return (
     <div className="App">
-      {text.text.level1.main}
-      {text}
+      {text.text}
+      {/* {text} */}
     </div>
   );
 }

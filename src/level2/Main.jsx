@@ -3,8 +3,8 @@ import { useState } from "react";
 import TodoList from "./components/TodoList";
 
 export default function Main() {
-  let [todos, setTodos] = useState(null);
-  let [input, setInput] = useState(null);
+  let [todos, setTodos] = useState([]);
+  let [input, setInput] = useState("");
   let [listType, setListType] = useState("all");
 
   function addToList() {
