@@ -41,7 +41,7 @@ export default function Main() {
 
       <TodoList todos={todos} listType={listType} completeTodo={completeTodo} deleteTodo={deleteTodo} />
 
-      <input value={input} onChanges={handleChange} />
+      <input value={input} onChange={handleChange} />
       <button onClick={addToList}>Submit</button>
 
       <br />
