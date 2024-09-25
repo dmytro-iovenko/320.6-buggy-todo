@@ -1,6 +1,6 @@
 export default function Todo({ item, completeTodo, deleteTodo }) {
   return (
-    <li style={{ listStyle: "none" }} class="input">
+    <li style={{ listStyle: "none" }} className="input">
       <input
         type="checkbox"
         checked={item.completed}
