@@ -1,4 +1,4 @@
-import "./styles.css";
+// import "./styles.css";
 import { useState } from "react";
 import {TodoList} from "./components/TodoList";
  
@@ -42,7 +42,7 @@ export default function Main() {
       <h1>Todos ({listType})</h1>
 
       <TodoList
-        // todos={todos}
+        todos={todos}
         listType={listType}
         completeTodo={completeTodo}
         deleteTodo={deleteTodo}
