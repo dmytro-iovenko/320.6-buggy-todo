@@ -21,6 +21,7 @@ function TodoList({ todos, listType, completeTodo, deleteTodo }) {
     <ul>
       {filteredTodos.map((item) => (
         <Todo
+          key={item.id}
           item={item}
           completeTodo={completeTodo}
           deleteTodo={deleteTodo}
