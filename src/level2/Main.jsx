@@ -1,7 +1,7 @@
 // import "./styles.css";
 import { useState } from "react";
-import {TodoList} from "./components/TodoList";
- 
+import TodoList from "./components/TodoList";
+
 export default function Main() {
   let [todos, setTodos] = useState(null);
   let [input, setInput] = useState(null);
@@ -11,7 +11,7 @@ export default function Main() {
     let item = {
       text: input,
       completed: false,
-      id: crypto.randomUUID() // 2188jd-293483-dfllkaksldf
+      id: crypto.randomUUID(), // 2188jd-293483-dfllkaksldf
     };
 
     let newTodos = [...todos, item];
@@ -30,9 +30,7 @@ export default function Main() {
   }
 
   function completeTodo(id) {
-    let newTodos = todos.map((item) =>
-      item.id === id ? { ...item, completed: !item.completed } : item
-    );
+    let newTodos = todos.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item));
 
     setTodos(newTodos);
   }
@@ -41,12 +39,7 @@ export default function Main() {
     <div>
       <h1>Todos ({listType})</h1>
 
-      <TodoList
-        todos={todos}
-        listType={listType}
-        completeTodo={completeTodo}
-        deleteTodo={deleteTodo}
-      />
+      <TodoList todos={todos} listType={listType} completeTodo={completeTodo} deleteTodo={deleteTodo} />
 
       <input value={input} onChanges={handleChange} />
       <button onClick={addToList}>Submit</button>

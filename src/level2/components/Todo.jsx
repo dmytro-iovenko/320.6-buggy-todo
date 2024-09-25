@@ -1,4 +1,4 @@
-function Todo({ item, completeTodo, deleteTodo }) {
+export default function Todo({ item, completeTodo, deleteTodo }) {
   return (
     <li style={{ listStyle: "none" }} class="input">
       <input
