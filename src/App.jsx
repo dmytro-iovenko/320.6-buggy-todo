@@ -1,5 +1,5 @@
 import './App.css';
-import FirstLevel from '../level1/Main'
+import FirstLevel from './level1/Main'
 // import SecondLevel from "./level2/Main"
 function App() {
 

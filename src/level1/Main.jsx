@@ -1,16 +1,13 @@
-import './App.css';
-import randomLibrary from "randomLibrary"
+import "../App.css";
+// import randomLibrary from "randomLibrary"
 function Main() {
+  const [text, setText] = useState({ text: "Level 1 done" });
 
-  const [text,setText ]=useState({text:"Level 1 done"})
-  
-
-
-  setText('')
+  setText("");
   return (
     <div className="App">
-  {text.text.level1.main}
-  {text}
+      {text.text.level1.main}
+      {text}
     </div>
   );
 }
